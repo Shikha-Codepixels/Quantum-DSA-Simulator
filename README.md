@@ -26,11 +26,35 @@ Currently implemented:
 - Probability calculation
 - Superposition simulation
 
+##  Quantum Gates Implemented
+
+The following quantum gates are currently supported:
+
+### 1. NOT Gate (Pauli-X)
+Flips the qubit state:
+|0> → |1>  
+|1> → |0>
+
+Implemented using matrix logic:
+[0 1]  
+[1 0]
+
+---
+
+### 2. Hadamard Gate (H)
+Creates superposition by evenly distributing probability between |0> and |1>.
+
+Matrix:
+(1/√2) × [ 1  1 ]  
+          [ 1 -1 ]
+
+This allows the qubit to exist in both states simultaneously.
+
 Planned features:
 - Quantum gates (NOT, Hadamard)
 - Multi-qubit systems
 - Entanglement simulation using graphs
-- Quantum algorithms (Grover’s Search, Teleportation logic)
+- Quantum algorithms (Grover’s Search,      Teleportation logic)
 - Classical vs Quantum comparison
 
 ---
