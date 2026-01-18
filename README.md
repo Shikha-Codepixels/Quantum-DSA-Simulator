@@ -106,7 +106,8 @@ Quantum-DSA-Simulator/
 │ └── two_qubit.h
 │
 ├── docs/
-│ └── quantum_basics.md
+│ ├── quantum_basics.md
+│ └── entanglement.md
 │
 ├── README.md
 └── .gitignore
@@ -120,9 +121,30 @@ Quantum-DSA-Simulator/
 
 ##  How to Run
 
+### Standard Compilation 
+
 Using MSYS / MinGW:
 
 ```bash
-g++ src/main.cpp src/qubit.cpp -o quantum
+g++ src/main.cpp src/qubit.cpp src/gates.cpp src/two_qubit.cpp -o quantum
 ./quantum
+
+```
+
+### Quick Run 
+
+One time Set-up:
+
+```bash
+chmod +x run.sh
+
+```
+
+Run the project:
+
+```bash
+./run.sh
+
+```
+
 
