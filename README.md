@@ -20,11 +20,30 @@ The goal is to:
 
 ##  What This Project Does
 
-Currently implemented:
-- Qubit representation using structs
-- State normalization
-- Probability calculation
-- Superposition simulation
+This project simulates core quantum computing concepts using classical
+Data Structures and Algorithms in C++.
+
+### Currently implemented:
+- Single qubit simulation using probability amplitudes
+- State normalization and probability calculation
+- Quantum gates:
+  - NOT Gate (Pauli-X)
+  - Hadamard Gate
+- Two-qubit state representation
+- Normalization and probability calculation for two-qubit systems
+- Menu-driven interface to switch between single-qubit and two-qubit simulations
+
+##  How This Project Is Built
+
+This project builds everything from scratch using classical computation.
+
+All quantum behavior is simulated using:
+- Structs to represent quantum states
+- Mathematical normalization
+- Matrix-based gate logic
+- Modular C++ design
+
+The goal is clarity and understanding, not hardware-level accuracy.
 
 ##  Quantum Gates Implemented
 
@@ -74,9 +93,20 @@ Planned features:
 
 Quantum-DSA-Simulator/
 │
-├── src/ → implementation files
-├── include/ → header files
-├── docs/ → theory & explanation
+├── src/
+│ ├── main.cpp
+│ ├── qubit.cpp
+│ ├── gates.cpp
+│ └── two_qubit.cpp
+│
+├── include/
+│ ├── qubit.h
+│ ├── gates.h
+│ └── two_qubit.h
+│
+├── docs/
+│ └── quantum_basics.md
+│
 ├── README.md
 └── .gitignore
 

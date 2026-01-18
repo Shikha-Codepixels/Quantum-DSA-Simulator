@@ -148,3 +148,51 @@ The purpose is **understanding**.
 
 By building everything from scratch, the internal working of quantum computation
 becomes clearer and more intuitive from a computer science perspective.
+
+## Two-Qubit systems
+
+A single qubit has two possible basic states: |0> and |1>.
+
+When two qubits are combined, the system has four basic states:
+|00>, |01>, |10>, |11>
+
+The quantum state of a two-qubit system is represented as:
+
+|ψ> = a|00> + b|01> + c|10> + d|11>
+
+Where:
+- a², b², c², d² are probabilities
+- a² + b² + c² + d² = 1
+
+In this project, a two-qubit system is represented using a C++ struct
+containing four amplitudes.
+
+## Normalization in multi-qubit systems
+
+Just like a single qubit, a multi-qubit must also be normalized.
+
+For a two-qubit system:
+
+a² + b² + c² + d² = 1
+
+If the amplitudes do not satisfy this condition, they are normalized
+by dividing each value by the magnitude of the state vector.
+
+This ensures the probabilities always sum to 1 and the system
+remains physically valid.
+
+## 7. Why Two-Qubit Systems Matter
+
+Two-qubit systems are important because they allow us to study:
+
+- Quantum correlations
+- Entanglement
+- Non-classical behavior
+
+Some two-qubit states cannot be separated into two independent single-qubit states.
+These states are called entangled states.
+
+Understanding two-qubit systems is the foundation for:
+- Quantum algorithms
+- Quantum communication
+- Quantum advantage
