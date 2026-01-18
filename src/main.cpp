@@ -1,13 +1,14 @@
 #include <iostream>
 #include "../include/qubit.h"
 #include "../include/gates.h"
+#include "../include/two_qubit.h"
 
 using namespace std;
 
-int main() {
+void singleQubitMenu() {
     Qubit q;
 
-    cout << "Enter alpha (for |0>): ";
+    cout << "\nEnter alpha (for |0>): ";
     cin >> q.alpha;
 
     cout << "Enter beta (for |1>): ";
@@ -22,23 +23,53 @@ int main() {
     cout << "Enter choice: ";
     cin >> choice;
 
-    if (choice == 1) 
-    {
+    if (choice == 1) {
         applyNotGate(q);
         cout << "\nApplied NOT Gate.\n";
     }
-    else if (choice == 2) 
-    {
+    else if (choice == 2) {
         applyHadamardGate(q);
         cout << "\nApplied Hadamard Gate.\n";
     }
-    else 
-    {
+    else {
         cout << "Invalid choice.\n";
-        return 0;
+        return;
     }
 
     displayQubit(q);
+}
+
+void twoQubitMenu() {
+    TwoQubit q;
+
+    cout << "\nEnter amplitudes for |00> |01> |10> |11>:\n";
+    cin >> q.a >> q.b >> q.c >> q.d;
+
+    normalizeTwoQubit(q);
+    displayTwoQubit(q);
+}
+
+int main() {
+    int option;
+
+    cout << "==============================\n";
+    cout << " Quantum DSA Simulator\n";
+    cout << "==============================\n";
+    cout << "1. Single Qubit Simulation\n";
+    cout << "2. Two Qubit Simulation\n";
+    cout << "Enter option: ";
+    cin >> option;
+
+    if (option == 1) {
+        singleQubitMenu();
+    }
+    else if (option == 2) {
+        twoQubitMenu();
+    }
+    else {
+        cout << "Invalid option.\n";
+    }
 
     return 0;
 }
+
