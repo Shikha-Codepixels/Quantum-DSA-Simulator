@@ -47,27 +47,44 @@ void twoQubitMenu() {
 
     normalizeTwoQubit(q);
     displayTwoQubit(q);
+
+    if(isEntangled(q))
+    {
+        cout << "\nState is Entangled.\n";
+    }
+    else
+    {
+        cout << "\nState is NOT Entangled (seperable).\n";
+    }
+
 }
 
 int main() {
     int option;
 
-    cout << "==============================\n";
-    cout << " Quantum DSA Simulator\n";
-    cout << "==============================\n";
-    cout << "1. Single Qubit Simulation\n";
-    cout << "2. Two Qubit Simulation\n";
-    cout << "Enter option: ";
-    cin >> option;
+    while(true) {
+        cout << "==============================\n";
+        cout << " Quantum DSA Simulator\n";
+        cout << "==============================\n";
+        cout << "1. Single Qubit Simulation\n";
+        cout << "2. Two Qubit Simulation\n";
+        cout << "0. Exit\n";
+        cout << "Enter option: ";
+        cin >> option;
 
-    if (option == 1) {
-        singleQubitMenu();
-    }
-    else if (option == 2) {
-        twoQubitMenu();
-    }
-    else {
-        cout << "Invalid option.\n";
+        if (option == 1) {
+            singleQubitMenu();
+        }
+        else if (option == 2) {
+            twoQubitMenu();
+        }
+        else if (option == 0) {
+            cout << "\nExiting simulator.\n";
+            break;
+        }
+        else {
+            cout << "Invalid option.\n";
+        }
     }
 
     return 0;

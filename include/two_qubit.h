@@ -8,6 +8,7 @@ struct TwoQubit {
     double d; // |11>
 };
 
+bool isEntangled(const TwoQubit &q); 
 void normalizeTwoQubit(TwoQubit &q);
 void displayTwoQubit(const TwoQubit &q);
 

@@ -31,7 +31,8 @@ Data Structures and Algorithms in C++.
   - Hadamard Gate
 - Two-qubit state representation
 - Normalization and probability calculation for two-qubit systems
-- Menu-driven interface to switch between single-qubit and two-qubit simulations
+- Interactive, Menu-driven interface to switch between single-qubit and two-qubit simulations with user controlled exit
+- Entanglement detection for two-qubit pure states
 
 ##  How This Project Is Built
 
@@ -109,6 +110,13 @@ Quantum-DSA-Simulator/
 │
 ├── README.md
 └── .gitignore
+
+## Key Highlights
+
+- Built completely from scratch using classical c++
+- No quantum libraries or simulators used
+- Focuses on logical and algorithmic understanding
+- Modular and extensible project structure
 
 ##  How to Run
 

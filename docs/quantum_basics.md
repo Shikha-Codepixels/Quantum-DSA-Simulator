@@ -196,3 +196,41 @@ Understanding two-qubit systems is the foundation for:
 - Quantum algorithms
 - Quantum communication
 - Quantum advantage
+
+## 8. Entanglement Detection
+
+For pure two-qubit states, entanglement can be detected using a simple
+mathematical condition.
+
+Given a two-qubit state:
+
+|ψ> = a|00> + b|01> + c|10> + d|11>
+
+If the following condition holds:
+
+a × d = b × c
+
+then the state is separable (not entangled).
+
+If:
+
+a × d ≠ b × c
+
+then the state is entangled.
+
+This project uses this condition to algorithmically determine whether
+a two-qubit state is entangled.
+
+## 9. Interactive Simulation Flow
+
+The simulator runs in a continuous loop, allowing the user to test
+multiple quantum states in a single execution.
+
+Users can:
+- Choose between single-qubit and two-qubit simulations
+- Apply quantum gates
+- Check entanglement
+- Exit the program manually
+
+This design makes the simulator interactive and closer to a real
+software application rather than a one-time demo.

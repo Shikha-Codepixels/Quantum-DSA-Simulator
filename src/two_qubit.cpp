@@ -28,3 +28,7 @@ void displayTwoQubit(const TwoQubit &q) {
     cout << "|10>: " << q.c*q.c << endl;
     cout << "|11>: " << q.d*q.d << endl;
 }
+
+bool isEntangled(const TwoQubit &q) {
+    return (q.a * q.d) != (q.b * q.c);
+}
